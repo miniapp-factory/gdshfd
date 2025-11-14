@@ -60,7 +60,7 @@ export default function SlotMachine() {
     if (!spinning) {
       checkWin();
     }
-  }, [grid, spinning]);
+  });
 
   return (
     <div className="flex flex-col items-center gap-4">
@@ -74,7 +74,7 @@ export default function SlotMachine() {
           />
         ))}
       </div>
-      <Button onClick={spin} disabled={spinning} variant="primary">
+      <Button onClick={spin} disabled={spinning} variant="default">
         {spinning ? "Spinning..." : "Spin"}
       </Button>
       {winMessage && (
