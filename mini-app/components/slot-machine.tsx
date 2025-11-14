@@ -60,7 +60,7 @@ export default function SlotMachine() {
     if (!spinning) {
       checkWin();
     }
-  });
+  }, [grid, spinning]);
 
   return (
     <div className="flex flex-col items-center gap-4">
